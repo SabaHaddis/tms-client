@@ -1,2 +1,2 @@
-import { Temporal } from "@js-temporal/polyfill";
-//# sourceMappingURL=enrollment.model.js.map
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
