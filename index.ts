@@ -10,7 +10,7 @@ enrollmentDate: Temporal.Now.instant(),
 // console.log(student.gpa.toFixed(2));
 // console.log(student.gpa?.toFixed(2) ?? "Not yet graded");
 
-import type { Student } from "./models/student.model.ts";
+import { Student } from "./models/student.model.js";
 import { isStudent } from "./models/student.model.js";
 
 function processStudent(raw: unknown) {
@@ -29,3 +29,8 @@ processStudent({
 });
 
 processStudent(42);
+import { parseStudent } from "./models/student.model";
+console.log(parseStudent({ id: "STU-001", name: "Hana" }));
+// Prints a valid Student object
+parseStudent({ id: 42, name: "Test" });
+// Throws: TypeError: Expected id to be a string, received number

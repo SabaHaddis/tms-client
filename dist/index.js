@@ -23,3 +23,8 @@ processStudent({
     gpa: 3.7
 });
 processStudent(42);
+const student_model_1 = require("./models/student.model");
+console.log((0, student_model_1.parseStudent)({ id: "STU-001", name: "Hana" }));
+// Prints a valid Student object
+(0, student_model_1.parseStudent)({ id: 42, name: "Test" });
+// Throws: TypeError: Expected id to be a string, received number
